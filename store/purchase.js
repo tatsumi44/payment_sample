@@ -29,6 +29,9 @@ export const actions = {
       commit("changRef", item);
     } catch (error) {
       console.log(error);
+      this.$router.push(
+        '/status/error'
+      );
     }
   }
 }

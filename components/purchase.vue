@@ -26,6 +26,7 @@ export default {
     purchase() {
       alert("本当に購入しますか？？");
       console.log("!ok");
+      this.item["date"] = new Date();
       this.$store.dispatch("purchase/purchase_item", this.item);
     }
   }

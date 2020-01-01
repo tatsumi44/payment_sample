@@ -3,11 +3,11 @@
     <div>
       <img
         class="completion_image"
-        src="https://3.bp.blogspot.com/-E9hOwqPle4A/VahTxZAjCiI/AAAAAAAAv4w/QUCb8DsJHc8/s800/pose_dokkiri_daiseikou.png"
+        src="https://dvrs04bx77b2x.cloudfront.net/Midworks/item/image/normal/532a3290-e403-4083-900f-8ce98aace56c.png"
         alt
       />
-      <h1 class="title">購入完了</h1>
-      <h2 class="subtitle">ご注文が完了しました</h2>
+      <h1 class="title">購入失敗</h1>
+      <h2 class="subtitle">ご注文が完了シませんでした</h2>
       <button @click="back">戻る</button>
     </div>
   </section>
