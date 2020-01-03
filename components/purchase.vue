@@ -8,26 +8,61 @@
     />
     <p>Name : パーカー</p>
     <p>Price : ¥1000</p>
-    <!-- <form action>
-      <input @click="purchase" type="submit" value="購入" />
-    </form>-->
-    <button @click="purchase">purchase</button>
+    <button @click="purchase">購入</button>
+    <div id="card-element"></div>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
 export default {
+  head: {
+    script: [
+      {
+        src: "https://js.stripe.com/v3/"
+      }
+    ]
+  },
+  mounted() {},
   data() {
     return {
       item: { name: "パーカー", price: 1000 }
     };
   },
+
   methods: {
     purchase() {
-      alert("本当に購入しますか？？");
-      console.log("!ok");
-      this.item["date"] = new Date();
-      this.$store.dispatch("purchase/purchase_item", this.item);
+      var stripe = Stripe("pk_test_jsNti0KSMi42AcJsormj1xtW00qcR2gtNk");
+      var elements = stripe.elements();
+      var cardElement = elements.create("card");
+      cardElement.mount("#card-element");
+      //   alert("本当に購入しますか？？");
+      //   var stripe = Stripe("pk_test_jsNti0KSMi42AcJsormj1xtW00qcR2gtNk");
+      //   var elements = stripe.elements();
+      //   var style = {
+      //     base: {
+      //       color: "#32325d"
+      //     }
+      //   };
+      //   console.log("!ok");
+      //   this.item["date"] = new Date();
+      //   this.$store.dispatch("purchase/purchase_item", this.item);
+    },
+    checkout() {
+      // this.$checkout.close()
+      // is also available.
+      this.$checkout.open({
+        image: "https://i.imgur.com/1PHlmFF.jpg",
+        locale: "en",
+        currency: "BZD",
+        name: "Blips and Chitz!",
+        description: "An entire afternoon at Blips and Chitz!",
+        amount: 9999999,
+        panelLabel: "Play Roy for {{amount}}",
+        token: token => {
+          // handle the token
+        }
+      });
     }
   }
 };

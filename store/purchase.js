@@ -1,8 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+// import Stripe from 'stripe'
 import firebase from "~/plugins/firebase.js";
+// import VueStripeCheckout from '../node_modules/vue-stripe-checkout/dist/index.js'
+// import VueStripeCheckout from 'vue-stripe-checkout'
 Vue.use(Vuex);
 const db = firebase.firestore();
+
+
+// const options = {
+//   key: 'pk_test_jsNti0KSMi42AcJsormj1xtW00qcR2gtNk',
+//   image: 'https://cdn.meme.am/images/100x100/15882140.jpg',
+//   locale: 'auto',
+//   currency: 'PHP',
+//   billingAddress: false,
+//   panelLabel: 'Subscribe {{amount}}'
+// }
+// Vue.use(VueStripeCheckout, options)
 
 export const state = () => ({
   item: null
