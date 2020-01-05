@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import firebase from "~/plugins/firebase.js";
+import Axios from "~/plugins/axios.js";
+// import Axios from "axios"
 Vue.use(Vuex);
-const db = firebase.firestore();
-
 export const state = () => ({
   item: null
 })
@@ -19,14 +18,15 @@ export const mutations = {
 }
 
 export const actions = {
-  async purchase_item({
+  async sendToken({
     commit
-  }, item) {
-    console.log("OK");
+  }, body) {
+    console.log(`OK! ${body}`);
     try {
-      const ref = await db.collection("item").add(item);
-      const date = new Date();
-      commit("changRef", item);
+      const res = await await Axios.post(`/helloWorld`, body);
+      commit("changRef", res)
+      console.log(res);
+
     } catch (error) {
       console.log(error);
       this.$router.push(

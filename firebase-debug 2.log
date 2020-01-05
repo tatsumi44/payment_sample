@@ -1,0 +1,112 @@
+[debug] [2020-01-04T13:41:11.543Z] ----------------------------------------------------------------------
+[debug] [2020-01-04T13:41:11.546Z] Command:       /Users/k-tatsumi/.nodebrew/node/v12.2.0/bin/node /Users/k-tatsumi/.nodebrew/current/bin/firebase init functions
+[debug] [2020-01-04T13:41:11.546Z] CLI Version:   7.11.0
+[debug] [2020-01-04T13:41:11.546Z] Platform:      darwin
+[debug] [2020-01-04T13:41:11.546Z] Node Version:  v12.2.0
+[debug] [2020-01-04T13:41:11.547Z] Time:          Sat Jan 04 2020 22:41:11 GMT+0900 (GMT+09:00)
+[debug] [2020-01-04T13:41:11.547Z] ----------------------------------------------------------------------
+[debug] [2020-01-04T13:41:11.547Z] 
+[debug] [2020-01-04T13:41:11.556Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-04T13:41:11.556Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/k-tatsumi/Desktop/payment_app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-01-04T13:41:35.331Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-04T13:41:35.331Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-04T13:41:35.687Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-04T13:41:35.702Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-01-04T13:41:37.538Z] <<< HTTP RESPONSE 200
+[info] i  Using project mercafe-ba882 (mercafe)
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2020-01-04T13:41:45.188Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-04T13:41:45.188Z] > authorizing via signed-in user
+[debug] [2020-01-04T13:41:45.188Z] [iam] checking project mercafe-ba882 for permissions ["firebase.projects.get"]
+[debug] [2020-01-04T13:41:45.188Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mercafe-ba882:testIamPermissions  
+
+[debug] [2020-01-04T13:41:48.028Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-04T13:41:48.029Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/mercafe-ba882/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2020-01-04T13:41:48.029Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/mercafe-ba882/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2020-01-04T13:41:50.833Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-04T13:41:51.261Z] <<< HTTP RESPONSE 200
+[info] ✔  Wrote functions/package.json
+[info] ✔  Wrote functions/.eslintrc.json
+[info] ✔  Wrote functions/index.js
+[info] ✔  Wrote functions/.gitignore
+[debug] [2020-01-04T13:44:43.909Z] ----------------------------------------------------------------------
+[debug] [2020-01-04T13:44:43.911Z] Command:       /Users/k-tatsumi/.nodebrew/node/v12.2.0/bin/node /Users/k-tatsumi/.nodebrew/current/bin/firebase init functions
+[debug] [2020-01-04T13:44:43.911Z] CLI Version:   7.11.0
+[debug] [2020-01-04T13:44:43.911Z] Platform:      darwin
+[debug] [2020-01-04T13:44:43.911Z] Node Version:  v12.2.0
+[debug] [2020-01-04T13:44:43.912Z] Time:          Sat Jan 04 2020 22:44:43 GMT+0900 (GMT+09:00)
+[debug] [2020-01-04T13:44:43.912Z] ----------------------------------------------------------------------
+[debug] [2020-01-04T13:44:43.912Z] 
+[debug] [2020-01-04T13:44:43.923Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-04T13:44:43.923Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/k-tatsumi/Desktop/payment_app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-01-04T13:44:45.546Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-01-04T13:44:46.556Z] <<< HTTP RESPONSE 200
+[info] i  Using project mercafe-ba882 (mercafe)
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2020-01-04T13:44:50.624Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-04T13:44:50.624Z] > authorizing via signed-in user
+[debug] [2020-01-04T13:44:50.624Z] [iam] checking project mercafe-ba882 for permissions ["firebase.projects.get"]
+[debug] [2020-01-04T13:44:50.625Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mercafe-ba882:testIamPermissions  
+
+[debug] [2020-01-04T13:44:52.462Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-04T13:44:52.463Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/mercafe-ba882/services/cloudfunctions.googleapis.com:enable  
+ 
+[debug] [2020-01-04T13:44:52.464Z] >>> HTTP REQUEST POST https://serviceusage.googleapis.com/v1/projects/mercafe-ba882/services/runtimeconfig.googleapis.com:enable  
+ 
+[debug] [2020-01-04T13:44:55.134Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-04T13:44:55.135Z] <<< HTTP RESPONSE 200
+[info] ✔  Wrote functions/package.json
+[info] ✔  Wrote functions/.eslintrc.json
+[info] ✔  Wrote functions/index.js
+[info] ✔  Wrote functions/.gitignore

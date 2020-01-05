@@ -17,6 +17,18 @@ module.exports = {
         content: 'Nuxt.js project'
       }
     ],
+    modules: [
+      '@nuxtjs/axios',
+      '@nuxtjs/proxy'
+    ],
+    proxy: {
+      '/api': {
+        target: 'https://us-central1-mercafe-ba882.cloudfunctions.net',
+        pathRewrite: {
+          '^/api': '/'
+        }
+      }
+    },
     script: [{
       src: 'https://js.stripe.com/v3/'
     }],

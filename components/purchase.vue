@@ -69,6 +69,7 @@ export default {
   methods: {
     purchase() {
       console.log("!ok");
+      let store = this.$store;
       stripe.createToken(cardElement).then(function(result) {
         if (result.error) {
           // エラー表示.
@@ -77,27 +78,15 @@ export default {
         } else {
           // トークンをサーバに送信
           // stripeTokenHandler(result.token);
-          console.log(`token => ${result.token}`);
+          console.log(`token => ${result.token.id}`);
+          const body = {
+            token: result.token.id
+          };
+          store.dispatch("stripe/sendToken", body);
         }
       });
-      this.item["date"] = new Date();
-      this.$store.dispatch("purchase/purchase_item", this.item);
-    },
-    checkout() {
-      // this.$checkout.close()
-      // is also available.
-      this.$checkout.open({
-        image: "https://i.imgur.com/1PHlmFF.jpg",
-        locale: "en",
-        currency: "BZD",
-        name: "Blips and Chitz!",
-        description: "An entire afternoon at Blips and Chitz!",
-        amount: 9999999,
-        panelLabel: "Play Roy for {{amount}}",
-        token: token => {
-          // handle the token
-        }
-      });
+      // this.item["date"] = new Date();
+      // this.$store.dispatch("purchase/purchase_item", this.item);
     }
   }
 };
@@ -108,8 +97,4 @@ export default {
   width: 300px;
   height: 300px;
 }
-/* #card-element {
-  width: 300px;
-  height: 300px;
-} */
 </style>
