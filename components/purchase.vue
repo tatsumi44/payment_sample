@@ -70,6 +70,7 @@ export default {
     purchase() {
       console.log("!ok");
       let store = this.$store;
+      const item = this.item;
       stripe.createToken(cardElement).then(function(result) {
         if (result.error) {
           // エラー表示.
@@ -80,13 +81,16 @@ export default {
           // stripeTokenHandler(result.token);
           console.log(`token => ${result.token.id}`);
           const body = {
-            token: result.token.id
+            name: item.name,
+            price: item.price,
+            token: result.token.id,
+            date: new Date()
           };
           store.dispatch("stripe/sendToken", body);
+          // this.item["date"] = new Date();
+          // this.$store.dispatch("purchase/purchase_item", this.item);
         }
       });
-      // this.item["date"] = new Date();
-      // this.$store.dispatch("purchase/purchase_item", this.item);
     }
   }
 };
