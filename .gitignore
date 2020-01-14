@@ -1,6 +1,8 @@
 # dependencies
 node_modules/
 plugins/firebase.js
+firebase-debug.log
+functions/node_modules/
 
 # logs
 npm-debug.log
